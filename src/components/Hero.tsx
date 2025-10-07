@@ -39,7 +39,7 @@ export default function Hero() {
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/syedwajahat-dev"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"

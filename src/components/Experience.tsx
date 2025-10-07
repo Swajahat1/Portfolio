@@ -4,7 +4,7 @@ export default function Experience() {
   const experiences = [
     {
       title: 'Flutter Developer Intern',
-      company: 'CHC',
+      company: 'Community HealthCare Clinics',
       period: 'Apr 2025 – Aug 2025',
       achievements: [
         'Designed and developed 15+ mobile app interfaces using Figma and Flutter',
