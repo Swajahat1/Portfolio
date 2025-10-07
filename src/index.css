@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent;
+  }
+
+  .card {
+    @apply bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 transition-all duration-300 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/10;
+  }
+
+  .project-card {
+    @apply bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 transition-all duration-300 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/20 hover:scale-[1.02];
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg transition-all duration-300 hover:from-cyan-400 hover:to-blue-500 hover:shadow-lg hover:shadow-cyan-500/50 hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 bg-transparent border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg transition-all duration-300 hover:bg-cyan-500/10 hover:shadow-lg hover:shadow-cyan-500/50 hover:scale-105;
+  }
+
+  .social-icon {
+    @apply w-12 h-12 flex items-center justify-center rounded-full bg-gray-800/50 border border-gray-700 text-gray-300 transition-all duration-300 hover:bg-cyan-500/10 hover:border-cyan-500 hover:text-cyan-400 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/30;
+  }
+
+  .skill-tag {
+    @apply px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 rounded-full text-sm font-medium transition-all duration-300 hover:bg-cyan-500/20 hover:scale-105;
+  }
+
+  .tech-tag {
+    @apply px-3 py-1 bg-gray-700/50 border border-gray-600/50 text-gray-300 rounded-md text-xs font-medium transition-all duration-300 hover:border-cyan-500/50 hover:text-cyan-400;
+  }
+
+  .nav-link {
+    @apply text-gray-300 font-medium transition-all duration-300 hover:text-cyan-400 relative;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .nav-link-active {
+    @apply text-cyan-400;
+  }
+
+  .nav-link-active::after {
+    @apply w-full;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-300 mb-2;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 transition-all duration-300 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.8s ease-out forwards;
+  }
+}
